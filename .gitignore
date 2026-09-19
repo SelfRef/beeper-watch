@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local state: the service keeps everything in one SQLite file, which is a
+# volume in production and litter here.
+*.db
+*.db-wal
+*.db-shm
+data/

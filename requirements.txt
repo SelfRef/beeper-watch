@@ -1,0 +1,7 @@
+# Pinned so a rebuild months from now produces the same service. The MCP SDK
+# is the one that actually moves: the mounted streamable-HTTP app and its
+# session manager are its API, not a stable protocol surface.
+fastapi==0.141.1
+uvicorn[standard]==0.53.0
+httpx==0.28.1
+mcp==2.2.0
