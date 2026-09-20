@@ -109,7 +109,7 @@ at all.
 ## The bridge side
 
 The reporting half is a patch, not part of this repo: see `patches/` in
-[beeper-bridge-manager-docker](https://github.com/SelfRef/beeper-bridge-manager-docker).
+[beeper-bridge-manager](https://github.com/SelfRef/beeper-bridge-manager).
 Set `WATCH_URL` (and `WATCH_TOKEN`) on that container and every bridge with a
 patched binary starts reporting.
 

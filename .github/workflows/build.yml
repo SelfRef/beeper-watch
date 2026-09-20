@@ -39,7 +39,10 @@ jobs:
 
       # GHCR requires lowercase names; github.repository may contain uppercase.
       - name: Set image name
-        run: echo "IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY,,}" >> "$GITHUB_ENV"
+        run: |
+          echo "IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY,,}" >> "$GITHUB_ENV"
+          repo="${GITHUB_REPOSITORY##*/}"
+          echo "REPO_NAME=${repo,,}" >> "$GITHUB_ENV"
 
       - uses: docker/setup-buildx-action@v4
 
@@ -62,7 +65,7 @@ jobs:
             type=raw,value=latest,enable={{is_default_branch}}
             type=ref,event=pr
           labels: |
-            org.opencontainers.image.title=beeper-watch
+            org.opencontainers.image.title=${{ env.REPO_NAME }}
             org.opencontainers.image.description=Filter self-hosted Beeper bridge events and notify n8n
 
       - name: Build

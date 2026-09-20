@@ -3,7 +3,7 @@
 # Beeper has no event API: no webhooks, no gateway, and its Desktop API is
 # request/response only. The self-hosted bridges are therefore patched to
 # report every event they handle (the beeper-watch patch in
-# beeper-bridge-manager-docker), and this is what they report to.
+# beeper-bridge-manager), and this is what they report to.
 #
 # Everything lives in one SQLite file on /data: the rules, a short buffer of
 # recent events so a rule can be dry-run against real traffic before it is

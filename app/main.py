@@ -2,7 +2,7 @@
 
 Beeper exposes no events at all, so the bridges themselves are patched to
 report everything they handle here (see the beeper-watch patch in
-beeper-bridge-manager-docker). This service is the other half: it keeps the
+beeper-bridge-manager). This service is the other half: it keeps the
 rules, decides what matters, and delivers.
 
 Three surfaces:
