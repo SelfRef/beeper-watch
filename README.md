@@ -80,7 +80,7 @@ is an MCP server:
 `test_rule` is the important one. It runs a filter against the last few hundred
 real events and reports what it *would* have caught, without saving or sending
 anything, so an agent can check its own work before committing to a rule. The
-names follow the read-only convention this stack's MCPHub filters on: `list_*`,
+names follow the usual read-only convention a gateway can filter on: `list_*`,
 `get_*` and `test_*` read, everything else writes.
 
 ## Configuration
